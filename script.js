@@ -58,7 +58,9 @@ function deleteLast() {
         indexOfInput -= lengthOfLast;
     }
     $("#input").val(value.slice(0, -1));
-    
+    if ($("#input").val().length == 0) {
+        $("#input").val('0');
+    }
 }
 
 $("#back").click(deleteLast);
